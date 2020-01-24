@@ -1,0 +1,10 @@
+<h3>Shipping Prices</h3>
+
+<select>
+  <option *ngFor="let shipping of shippingCosts | async">{{shipping.type}} {{shipping.price}}</option>
+</select>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
