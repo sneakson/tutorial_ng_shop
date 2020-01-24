@@ -1,0 +1,10 @@
+<h1>Cart</h1>
+
+<div class="cart-item" *ngFor="let item of items; index as cardId">
+  <span>{{cardId + 1}}. {{item.name}}</span>
+  <span>{{item.price | currency}}</span>
+</div>
+
+<div>
+  Total: {{total | currency }}
+</div>
